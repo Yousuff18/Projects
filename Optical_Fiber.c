@@ -20,5 +20,16 @@ int main()
 
     NA = (NA1+NA2+NA3+NA4+NA5+NA6+NA7)/7;
 
-    printf("The Numerical Aperture of the given optical fiber, NA = %f", NA);
+    printf("The Numerical Aperture of the given optical fiber, NA1= %f\n", NA1);
+    printf("The Numerical Aperture of the given optical fiber, NA2= %f\n", NA2);
+    printf("The Numerical Aperture of the given optical fiber, NA3= %f\n", NA3);
+    printf("The Numerical Aperture of the given optical fiber, NA4= %f\n", NA4);
+    printf("The Numerical Aperture of the given optical fiber, NA5= %f\n", NA5);
+    printf("The Numerical Aperture of the given optical fiber, NA6= %f\n", NA6);
+    printf("The Numerical Aperture of the given optical fiber, NA7= %f\n", NA7);
+
+
+    printf("\nThe Numerical Aperture of the given optical fiber, NA = %f\n\n", NA);
+
+   
 }
