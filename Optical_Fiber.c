@@ -21,14 +21,4 @@ int main()
     NA = (NA1+NA2+NA3+NA4+NA5+NA6+NA7)/7;
 
     printf("The Numerical Aperture of the given optical fiber, NA = %f", NA);
-
-    if(NA <= 0)
-    {
-        prinf("the light enters the fiber at an angle greater than the acceptance angle.");
-    }
-
-    else if (NA >= 1)
-    {
-        printf("Check the input data as your data indicates that you have absolutely no internal diffraction or transmission loss\nif it's still correct then congratulation, you just solved the billion dollar problem");
-    }
 }
