@@ -1,10 +1,9 @@
-#include<stdio.h>
-#include<math.h>
+#include <stdio.h>
+#include <math.h>
 
 #define MAX_MEASUREMENTS 10 // Maximum number of measurements
 
-int main()
-{
+int main() {
     int num_measurements;
     float L[MAX_MEASUREMENTS], d[MAX_MEASUREMENTS], NA[MAX_MEASUREMENTS], total_NA = 0;
 
@@ -42,7 +41,34 @@ int main()
         printf("Measurement %d: %f\n", i + 1, NA[i]);
     }
 
+    // Output average NA
     printf("\nAverage Numerical Aperture (NA) for the given measurements: %f\n\n", average_NA);
+
+    // Classify the fiber based on numerical aperture
+    if (average_NA < 0.2) {
+        printf("Fiber Classification: Single-mode fiber\n");
+        printf("Specifications:\n");
+        printf("- Low dispersion\n");
+        printf("- High data transmission capacity\n");
+        printf("- High modal bandwidth\n");
+        printf("- Low attenuation\n");
+    } else if (average_NA >= 0.2 && average_NA < 0.5) {
+        printf("Fiber Classification: Multimode fiber (step-index)\n");
+        printf("Specifications:\n");
+        printf("- Moderate dispersion\n");
+        printf("- Moderate data transmission capacity\n");
+        printf("- Moderate modal bandwidth\n");
+        printf("- Moderate attenuation\n");
+    } else if (average_NA >= 0.5 && average_NA < 0.6) {
+        printf("Fiber Classification: Multimode fiber (graded-index)\n");
+        printf("Specifications:\n");
+        printf("- Low dispersion\n");
+        printf("- High data transmission capacity\n");
+        printf("- High modal bandwidth\n");
+        printf("- Low attenuation\n");
+    } else {
+        printf("Fiber Classification: Unknown\n");
+    }
 
     return 0;
 }
